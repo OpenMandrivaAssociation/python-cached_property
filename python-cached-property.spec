@@ -19,11 +19,11 @@ BuildRequires:	python-setuptools
 %description
 A decorator for caching properties in classes
 
-%package -n python3-%{pypi_name}
+%package -n python2-%{pypi_name}
 Summary:	A decorator for caching properties in classes
 Group:		Development/Python
 
-%description -n python3-%{pypi_name}
+%description -n python2-%{pypi_name}
 A decorator for caching properties in classes
 
 %prep
@@ -45,10 +45,10 @@ popd
 %py2_install
 
 %files
-%{python2_sitelib}/cached_property.*
-%{python2_sitelib}/cached_property-%{version}-py?.?.egg-info/*
-
-%files -n python3-%{pypi_name}
 %{python3_sitelib}/cached_property.*
 %{python3_sitelib}/cached_property-%{version}-py?.?.egg-info/*
 %{python3_sitelib}/__pycache__/cached_property*
+
+%files -n python2-%{pypi_name}
+%{python2_sitelib}/cached_property.*
+%{python2_sitelib}/cached_property-%{version}-py?.?.egg-info/*
